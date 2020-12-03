@@ -10,6 +10,8 @@ with open('input.txt') as reader:
         input.append(int(line.rstrip('\n')))
 
 # Hash Solution
+# Complexity O(n) time | O(n) space
+# where n is the number of expense items in the list
 def findTwentyTwentyElementsAndMultiply(expenseList):
     potentialMatchesHash = {}
     potentialMatch = 2020 - expenseList[0]

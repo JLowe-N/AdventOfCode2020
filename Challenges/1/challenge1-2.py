@@ -12,18 +12,18 @@ with open('input.txt') as reader:
 
 # Hash Solution
 # Complexity
-def findTwentyTwentyElementsAndMultiply(inputs):
+# def findTwentyTwentyElementsAndMultiply(inputs):
 
 # Naive Solution
 # Complexity O(n^3) time | O(1) space
-# def findTwentyTwentyElementsAndMultiply(expenseList):
-#     for i in range(1, len(expenseList) - 2):
-#         for j in range(i + 1, len(expenseList) - 1):
-#             for k in range(j + 1, len(expenseList)):
-#                 currentSum = expenseList[i] + expenseList[j] + expenseList[k]
-#                 if currentSum == 2020:
-#                     return expenseList[i] * expenseList[j] * expenseList[k]  
-#     print('No triplet of expenses adds to 2020!') 
+def findTwentyTwentyElementsAndMultiply(expenseList):
+    for i in range(1, len(expenseList) - 2):
+        for j in range(i + 1, len(expenseList) - 1):
+            for k in range(j + 1, len(expenseList)):
+                currentSum = expenseList[i] + expenseList[j] + expenseList[k]
+                if currentSum == 2020:
+                    return expenseList[i] * expenseList[j] * expenseList[k]  
+    print('No triplet of expenses adds to 2020!') 
      
 print(findTwentyTwentyElementsAndMultiply(input))
 

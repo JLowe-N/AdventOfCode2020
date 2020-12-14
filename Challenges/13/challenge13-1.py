@@ -22,7 +22,7 @@ def myFunc(startTime, busList):
     waitingTime = min(closestArrivalTimes)
     targetBusIdx = closestArrivalTimes.index(waitingTime)
     targetBus = busList[targetBusIdx]
-    return targetBus * waitingTime
+    return targetBus *
 
 
 print(myFunc(input[0], input[1]))

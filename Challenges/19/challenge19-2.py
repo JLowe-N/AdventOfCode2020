@@ -4,7 +4,7 @@ rules = {}
 messages = []
 switch = False
 
-filename = 'input.txt'
+filename = 'part2input.txt'
 
 with open(filename) as file:
     for line in file:
@@ -35,13 +35,22 @@ def build_regex(r: str):
 rule42 = build_regex("42")
 rule31 = build_regex("31")
 
-my_regex = f"^{build_regex('0')}$"
-counter_p1 = 0
-for this_message in messages:
-    if re.match(my_regex, this_message):
-        counter_p1 += 1
+counter_p2 = 0
+for n in range(1, 10):  
+    my_regex = f"^({rule42}+{rule42}{{{n}}}{rule31}{{{n}}})$"
+    for this_message in messages:
+        if re.match(my_regex, this_message):
+            counter_p2 += 1
 
-print(counter_p1)
+print(counter_p2)
+
+# my_regex = f"^{build_regex('0')}$"
+# counter_p1 = 0
+# for this_message in messages:
+#     if re.match(my_regex, this_message):
+#         counter_p1 += 1
+
+# print(counter_p1)
 
 # print(rules)
 # print(messages)

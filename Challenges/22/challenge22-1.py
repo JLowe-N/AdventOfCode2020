@@ -30,6 +30,11 @@ input = parseInput('input.txt')
 def calcScore(p1_deck, p2_deck):
     winning_deck = p1_deck if len(p1_deck) > len(p2_deck) else p2_deck
 
+    if winning_deck == p1_deck:
+        print("player 1 wins")
+    else:
+        print("player 2 wins")
+
     winning_score = 0
     card_counter = 0
     while len(winning_deck) != 0:
